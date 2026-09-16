@@ -7,26 +7,9 @@ yargs.version("1.1.0");
 yargs.command({
   command: "add",
   describe: "add a random joke",
-  builder: {
-    name: {
-      describe: "name",
-      demandOption: false,
-      type: "string",
-    },
-    age: {
-      describe: "age",
-      demandOption: false,
-      type: "number",
-    },
-    joke: {
-      describe: "joke",
-      demandOption: false,
-      type: "string",
-    },
-  },
   handler: function () {
     jokes.addJoke();
-  },
+  }
 });
 
 //remove
@@ -38,11 +21,11 @@ yargs.command({
       describe: "name",
       demandOption: true,
       type: "string",
-    },
+    }
   },
   handler: function (argv) {
     jokes.removeJoke(argv.name);
-  },
+  }
 });
 
 //list
@@ -51,7 +34,7 @@ yargs.command({
   describe: "list your jokes",
   handler: function () {
     jokes.listJokes();
-  },
+  }
 });
 
 //read
@@ -63,11 +46,11 @@ yargs.command({
       describe: "joke name",
       demandOption: true,
       type: "string",
-    },
+    }
   },
   handler: function (argv) {
     jokes.readJoke(argv.name);
-  },
+  }
 });
 
 //keyword
@@ -79,11 +62,11 @@ yargs.command({
       describe: "keyword",
       demandOption: true,
       type: "string",
-    },
+    }
   },
   handler: function (argv) {
     jokes.searchKeyword(argv.keyword);
-  },
+  }
 });
 
 yargs.parse();

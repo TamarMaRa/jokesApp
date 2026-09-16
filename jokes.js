@@ -3,6 +3,8 @@ const Chance = require("chance");
 const bee = require("bee-jokes");
 const chalk = require("chalk");
 
+const jokesFile = 'jokes.json';
+
 const addJoke = () => {
   const jokes = loadJokes();
   const joke = new bee.Joke();
@@ -17,7 +19,7 @@ const addJoke = () => {
     age = chance.age();
     randomJoke = joke.getRandomJoke("en").joke;
     duplicateJoke = jokes.find((joke) => {
-      return joke.name === name && joke.age === age && joke.joke === joke;
+      return joke.name === name;
     });
   }
 
@@ -65,7 +67,7 @@ const readJoke = (name) => {
   if (jokeToRead) {
     console.log(chalk.blue(jokeToRead.joke));
   } else {
-    console.log(chalk.red("error, joke doesnt exsist"));
+    console.log(chalk.red("error, joke doesnt exist"));
   }
 };
 
@@ -76,18 +78,18 @@ const searchKeyword = (keyword) => {
   if (jokeToFind) {
     console.log(chalk.blue(jokeToFind[0].joke));
   } else {
-    console.log(chalk.red("error, joke doesnt exsist"));
+    console.log(chalk.red("error, joke doesnt exist"));
   }
 };
 
 const saveJokes = (jokes) => {
   const dataJSON = JSON.stringify(jokes, null, 2);
-  fs.writeFileSync("jokes.json", dataJSON);
+  fs.writeFileSync(jokesFile, dataJSON);
 };
 
 const loadJokes = () => {
   try {
-    const dataBuffer = fs.readFileSync("jokes.json");
+    const dataBuffer = fs.readFileSync(jokesFile);
     const dataJSON = dataBuffer.toString();
     return JSON.parse(dataJSON);
   } catch (e) {
@@ -96,9 +98,9 @@ const loadJokes = () => {
 };
 
 module.exports = {
-  addJoke: addJoke,
-  removeJoke: removeJoke,
-  listJokes: listJokes,
-  readJoke: readJoke,
-  searchKeyword: searchKeyword,
+  addJoke,
+  removeJoke,
+  listJokes,
+  readJoke,
+  searchKeyword
 };
