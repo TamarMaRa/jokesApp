@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Clara Jackson",
+    "age": 61,
+    "joke": "Why do programmers prefer dark mode? Because light attracts bugs."
+  },
+  {
+    "name": "Harry May",
+    "age": 43,
+    "joke": "Why did the ghost go to the bar on Halloween? For the boos."
+  },
+  {
+    "name": "Lillian Young",
+    "age": 45,
+    "joke": "I love group projects. Said no one ever."
+  },
+  {
+    "name": "Aaron Barrett",
+    "age": 41,
+    "joke": "Why did the music teacher need a ladder? To reach the high notes."
+  },
+  {
+    "name": "Isaac Wallace",
+    "age": 45,
+    "joke": "What's a programmer's favorite bug? A feature."
+  }
+]
