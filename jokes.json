@@ -1,22 +1,27 @@
 [
   {
-    "name": "Chase Pena",
-    "age": 48,
-    "joke": "Why did the patient bring a ladder to the doctor's office? Because he heard he had high blood pressure."
+    "name": "Clara Jackson",
+    "age": 61,
+    "joke": "Why do programmers prefer dark mode? Because light attracts bugs."
   },
   {
-    "name": "Eugenia Drake",
-    "age": 35,
-    "joke": "Why did the bicycle fall over? Because it was two-tired."
-  },
-  {
-    "name": "Floyd Harris",
-    "age": 42,
+    "name": "Harry May",
+    "age": 43,
     "joke": "Why did the ghost go to the bar on Halloween? For the boos."
   },
   {
-    "name": "Evelyn Perkins",
-    "age": 57,
+    "name": "Lillian Young",
+    "age": 45,
+    "joke": "I love group projects. Said no one ever."
+  },
+  {
+    "name": "Aaron Barrett",
+    "age": 41,
     "joke": "Why did the music teacher need a ladder? To reach the high notes."
+  },
+  {
+    "name": "Isaac Wallace",
+    "age": 45,
+    "joke": "What's a programmer's favorite bug? A feature."
   }
 ]
